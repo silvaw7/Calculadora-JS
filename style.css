@@ -1,0 +1,89 @@
+*{
+  font-family: 'Handjet';
+  margin: 0;
+}
+body {
+  background-color: whitesmoke;
+}
+
+.container{
+  vertical-align: middle;
+  height: 85vh;
+}
+.calculadora{
+  max-width: 350px;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr repeat(5,1fr);
+  grid-column-gap: 4px;
+  background-color: #45402b;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 6px 6px 6px;
+}
+.visor-calculadora{
+  grid-column: span 4;
+  background-color: black;
+  color: white;
+}
+button{
+  font-size: 2rem;
+  border: none;
+  border-radius: 6px;
+  margin: 4px;
+  box-shadow: 0px 6px;
+  transition: opacity 0.5s, box-shadow 0.10s;
+}
+button:hover{
+  opacity: 80%;
+}
+button:active{
+  opacity: 70%;
+  box-shadow: 0px 0px;
+}
+.number{
+  background-color: #fffeaa;
+}
+.operador{
+  background-color: #e0e7bb;
+}
+.result{
+  background-color: #e47230;
+}
+.button-2-sqr{
+  grid-column: span 2;
+}
+.visor-calculadora{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  max-height: 150px;
+  height: 85%;
+  margin: auto;
+  padding: 5px;
+  border-radius: 6px;
+}
+.resultado-anterior, .resultado-atual{
+  text-align: end;
+  padding: 4px;
+  overflow: hidden;
+}
+.resultado-atual{
+  font-size: 56px;
+  height: 50%;
+}
+.resultado-anterior{
+  font-size: 32px;
+  height: 50%;
+}
+
+@media (min-width:480px) { 
+  .container{
+    margin-top: 15px;
+    vertical-align: middle;
+    height: 85vh;
+    width: 95vw;
+  }
+ }
